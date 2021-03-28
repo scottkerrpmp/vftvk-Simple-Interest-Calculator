@@ -1,4 +1,24 @@
-body {background-color:tan;}
-h1{color:green;}
+/* 1. Set the body color to 'black', font to arial and font color to white.*/
+body {
+    background-color:black;
+    color:white;
+    font:arial;
+    }
+/* 2. Set the <h1> color to 'grey' and font to verdana.*/
+h1 {
+    color:grey;
+    font:verdana;
+    }
+/* 3. Create an entry for class 'maindiv'.*/
 
-
+.maindiv {
+    /* 6. Align the div to the center of the page. */
+    margin: 0 center;
+    /* 4. Set the background color to white, font color to black, width to 300 pixels, and padding to 20px in the newly created maindiv class.*/
+    background-color:white;
+    color:black;
+    width: 300px;
+    padding: 20px;
+    /* 5. Set the border radius to 25 px. */
+    border-radius: 25px;
+    }
