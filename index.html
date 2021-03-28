@@ -1,16 +1,51 @@
+<!--1. Add the doctype. -->
+<!DOCTYPE html>
 <html>
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- 2. Add "Simple Interest Calculator" as title. -->
+    <title>Simple Interest Calculator</title>
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <!-- 3. Move all the content which currently is in the <body> to a <div> tag.-->
+        <!-- 4. Set the class attribute of this div to 'maindiv'. -->
+            <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            <!--Create Amount number field -->
+            Amount <input type="number"  id="principal" name="principal">  <br/>
+            <br>
+            <!--5. Modify the input text box for interest rate to a slider using the <range> tag. -->
+            <!-- 6. For the <range> tag set the attributes min to 1, max to 20 and step to 0.25 and the value to 10.25.-->
+                <!-- Includes JS 8: Link this function with an "onchange" event on the range.-->
+            Rate <input onchange="sliderchange()" type="range" min="1" max="20" value="10.25" step=".25" class="slider" id="rate" name="rate"> 
+            <!-- 8. To show the value selected by the <range>, create a <span> element right after the range-->
+            <!-- 9. Inside the '` tag add the text "10.25 %".-->
+                <span id="sliderrate">10.25 %</span> <br/>
+            <br>
+           <!--10. Modify the input text box for "No of years" into a dropdown box with options 1 to 10 -->
+            <label for="years">No. of Years</label>
+            <select name="years" id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br><br>
+            <!--11. Change the "Compute" button to "Compute Interest". -->
+            <button onclick="compute()">Compute Interest</button>
+            <br><br>
+            <!--12. Below the "Compute Interest" button create an empty <span> and set its id to 'result'. -->
+            <span id="result"></span>
+            <br><br>
+            <!--13. Add a copyright message using the <footer> tag. -->
+            <footer>&copy; Everyone Can Get Rich</footer>
+        </div>
     </body>
 </html>
